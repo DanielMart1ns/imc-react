@@ -2,13 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
     padding: 10px;
 }
 
 .errorTitle{
     text-align: center;
-    margin: 20px 0;
     padding: 10px;
     color: #6a0101;
 }
@@ -29,4 +27,8 @@
     padding: 14px;
     text-align: center;
     border-bottom: 1px solid gray;
+}
+
+.lineTable{
+    background-color: yellow;
 }

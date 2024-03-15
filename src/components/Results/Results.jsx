@@ -7,13 +7,13 @@ const Results = ({weight, height}) => {
         if(imc < 18.5){
             return "Abaixo da média"
         }
-        else if(imc >= 18.5 && imc <= 25){
+        else if(imc >= 18.5 && imc <= 24.9){
             return 'Normal'
         }
-        else if(imc >= 25 && imc <= 30){
+        else if(imc >= 25 && imc <= 29.9){
             return 'Sobrepeso'
         }
-        else if(imc >= 30 && imc <= 40){
+        else if(imc >= 30 && imc <= 39.9){
             return 'Obesidade'
         }
         else if(imc >= 40){
@@ -59,19 +59,23 @@ const Results = ({weight, height}) => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className={styles.lineTable}>
+                            <tr className={imc < 18.5? styles.lineTable : styles.spaceColumns}>
+                                <td className={styles.spaceColumns}>Menor que 18</td>
+                                <td className={styles.spaceColumns}>Abaixo da Média</td>
+                            </tr>
+                            <tr className={imc >= 18.5 && imc <= 24.9? styles.lineTable : styles.spaceColumns}>
                                 <td className={styles.spaceColumns}>Entre 18,5 e 24,9</td>
                                 <td className={styles.spaceColumns}>Normal</td>
                             </tr>
-                            <tr className={styles.lineTable}>
+                            <tr className={imc >= 25 && imc <= 29.9? styles.lineTable : styles.spaceColumns}>
                                 <td className={styles.spaceColumns}>Entre 25,0 e 29,9</td>
                                 <td className={styles.spaceColumns}>Sobrepeso</td>
                             </tr>
-                            <tr className={styles.lineTable}>
+                            <tr className={imc >= 30 && imc <= 39.9? styles.lineTable : styles.spaceColumns}>
                                 <td className={styles.spaceColumns}>Entre 30,0 e 39,9</td>
                                 <td className={styles.spaceColumns}>Obesidade</td>
                             </tr>
-                            <tr className={styles.lineTable}>
+                            <tr className={imc >= 40? styles.lineTable : styles.spaceColumns}>
                                 <td className={styles.spaceColumns}>Maior que 40,0</td>
                                 <td className={styles.spaceColumns}>Obesidade Grave</td>
                             </tr>
