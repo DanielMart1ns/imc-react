@@ -1,0 +1,22 @@
+.title{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.verifyButton{
+    display: block;
+    margin: auto;
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #009300;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #fff;
+    transition: background-color .3s ease-in-out;
+}
+
+.verifyButton:hover{
+    background-color: #198b19;
+}
