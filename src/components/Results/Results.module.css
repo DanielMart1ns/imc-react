@@ -31,4 +31,5 @@
 
 .lineTable{
     background-color: yellow;
+    transition: all .5s ease-in-out;
 }
